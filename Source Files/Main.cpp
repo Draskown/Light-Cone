@@ -16,15 +16,12 @@ string FILENAME = "D:/Other/Desktop/Ucheba/HS/QIA/Project/Video.mp4";
 
 
 void main() {
-	
 	VideoCapture cap;
 	cap.open(FILENAME);
 	Mat image;
 	
 	//linear(cap, image, FILENAME);
-
 	//mask(image);
-
 	circles();
 
 	cap.release();

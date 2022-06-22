@@ -8,20 +8,16 @@
 using namespace cv;
 using namespace std;
 
-float round_d(double val)
-{
+float round_d(double val) {
 	return ceil(val * 1000.0) / 1000.0;
 }
 
 void circles() {
-	
 	Mat image150, image50, image, procImg;
-
 	int upper = 255, lower = 114;
 	double scale = 0.7, size = 0.03, FOV = 55.0, res = 1920.0;
 
-	for (int i = 0; i < 3; i++)
-	{
+	for (int i = 0; i < 3; i++) {
 		if (i == 1) {
 			image = imread("D:/Other/Desktop/Ucheba/HS/QIA/Project/150.jpg");
 			lower = 66;
@@ -36,22 +32,17 @@ void circles() {
 			image = imread("D:/Other/Desktop/Ucheba/HS/QIA/Project/50.jpg");
 
 		image = image(Rect(100, 700, 800, 700));
-
 		cvtColor(image, procImg, COLOR_BGR2GRAY);
-
 		medianBlur(procImg, procImg, 7);
 
 		Mat mask;
-
 		vector<Vec3f> circles;
 
 		inRange(procImg, Scalar(lower), Scalar(upper), mask);
-
 		HoughCircles(mask, circles, HOUGH_GRADIENT, 1,
 			400, 200, 10, 90/2, 120/2);
 
-		for (size_t i = 0; i < circles.size(); i++)
-		{
+		for (size_t i = 0; i < circles.size(); i++) {
 			Vec3i c = circles[i];
 			double radius = c[2];
 
@@ -72,9 +63,7 @@ void circles() {
 		}
 
 		circles.clear();
-
 		resize(image, image, Size(), scale, scale);
-
 
 		if (i == 1)
 			image.copyTo(image150);

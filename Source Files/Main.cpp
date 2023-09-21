@@ -7,6 +7,8 @@
 #include "Includes/Linear.h"
 #include "Includes/Mask.h"
 
+#include "Includes/Palette.h"
+
 using namespace std;
 using namespace cv;
 
@@ -19,10 +21,12 @@ void main() {
 	VideoCapture cap;
 	cap.open(FILENAME);
 	Mat image;
-	
+
 	//linear(cap, image, FILENAME);
 	//mask(image);
-	circles();
+	//circles();
+
+	palette(cap, image);
 
 	cap.release();
 	destroyAllWindows();

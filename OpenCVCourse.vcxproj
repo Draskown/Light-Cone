@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Source Files\Includes\Circles.cpp" />
     <ClCompile Include="Source Files\Includes\Linear.cpp" />
+    <ClCompile Include="Source Files\Includes\Palette.cpp" />
     <ClCompile Include="Source Files\Main.cpp" />
     <ClCompile Include="Source Files\Includes\Mask.cpp" />
   </ItemGroup>
@@ -28,6 +29,10 @@
     <ClInclude Include="Source Files\Includes\Circles.h" />
     <ClInclude Include="Source Files\Includes\Linear.h" />
     <ClInclude Include="Source Files\Includes\Mask.h" />
+    <ClInclude Include="Source Files\Includes\Palette.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Cards.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -14,8 +14,7 @@ using namespace cv;
 
 #define LOG(x) cout << "\n" + to_string(x) + "\n" << endl
 
-string FILENAME = "D:/Other/Desktop/Ucheba/HS/QIA/Project/Video.mp4";
-
+string FILENAME = "Resources/Video.mp4";
 
 void main() {
 	VideoCapture cap;

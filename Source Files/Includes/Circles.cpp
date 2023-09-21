@@ -19,17 +19,17 @@ void circles() {
 
 	for (int i = 0; i < 3; i++) {
 		if (i == 1) {
-			image = imread("D:/Other/Desktop/Ucheba/HS/QIA/Project/150.jpg");
+			image = imread("Resources/150.jpg");
 			lower = 66;
 			upper = 87;
 			size = 0.07;
 		}
 		else if (i == 2) {
-			image = imread("D:/Other/Desktop/Ucheba/HS/QIA/Project/Test.jpg");
+			image = imread("Resources/Test.jpg");
 			lower = 87;
 			size = 0.05;
 		} else
-			image = imread("D:/Other/Desktop/Ucheba/HS/QIA/Project/50.jpg");
+			image = imread("Resources/50.jpg");
 
 		image = image(Rect(100, 700, 800, 700));
 		cvtColor(image, procImg, COLOR_BGR2GRAY);

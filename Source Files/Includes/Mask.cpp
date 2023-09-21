@@ -10,7 +10,7 @@ using namespace cv;
 void mask(Mat& image) {
 	int lower = 66, upper = 87;
 	double scale = 0.7;
-	image = imread("D:/Other/Desktop/Ucheba/HS/QIA/Project/Test.jpg");
+	image = imread("Resources/Test.jpg");
 	image = image(Rect(100, 700, 800, 700));
 
 	resize(image, image, Size(), scale, scale);

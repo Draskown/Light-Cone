@@ -31,26 +31,7 @@ void linear(VideoCapture& cap, Mat& img, std::string& filename) {
 	Mat procImg, image;
 	int lower = 50, upper = 255, pixels = 0, distance = 0,
 		frameCounter = 0, frameCount = 30, sum = 0, avg = 0;
-	// int max = -1, min = 1000;
 	int frames[30]{};
-
-	std::vector<Mat> v;
-
-	/*image = imread("D:/Other/Desktop/Ucheba/HS/QIA/Project/180.jpg");
-	procImg = image(Rect(0, 100, 352, 300));
-	cvtColor(procImg, procImg, COLOR_BGR2GRAY);
-
-	inRange(procImg, Scalar(lower), Scalar(upper), procImg);
-	pixels = countNonZero(procImg);
-
-	putText(procImg,
-		std::to_string(pixels),
-		Point(5, 25),
-		FONT_HERSHEY_DUPLEX, 1,
-		Scalar(255, 255, 255));
-
-	imshow("window", procImg);
-	waitKey(0);*/
 
 	while (true) {
 		cap.read(img);
@@ -78,18 +59,6 @@ void linear(VideoCapture& cap, Mat& img, std::string& filename) {
 			sum += distance;
 			avg = sum / frameCount;
 		}
-
-		/*if (pixels > max)
-			max = pixels;
-
-		if (pixels < min)
-			min = pixels;*/
-
-		/*putText(image,
-				std::to_string(max) + ", " + std::to_string(min),
-				Point(5, 25),
-				FONT_HERSHEY_DUPLEX, 1,
-				Scalar(255, 255, 255));*/
 
 		putText(image,
 			std::to_string(avg) + " cm",

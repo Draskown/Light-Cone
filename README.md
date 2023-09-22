@@ -61,12 +61,10 @@ Requires Visual Studio and .NET Framework >=4.8. Works only on Windows, sadly.
 Download the VS solution with the project, it in the Visual Studio, uncomment one of the lines in `main.cpp` to test how one of the modules work.
 
 ```
-//linear(cap, image, FILENAME);
-//mask(image);
-//circles();
-
-palette(cap, image);
-
+// linear(cap, image, FILENAME);
+// mask(image);
+// circles();
+// palette(cap, image);
 ```
 
 - `linear` performs calculation from the video in `Resources`.

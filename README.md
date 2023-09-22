@@ -74,5 +74,5 @@ Download the VS solution with the project, it in the Visual Studio, uncomment on
 
 ## Ideas of improvement
 
-1. Use a real laser instead of the flashlight, preferably red, as red is easier to mask than white
+1. Use a real laser instead of the flashlight, preferably red, as red is more robust when it comes to masking rather than white
 2. Fell free to contribute (:
